@@ -1,13 +1,12 @@
 
 keyvaults = {
   level0 = {
-    name                = "level0"
+    name                = "htx-plg-kv-level0"
     resource_group_key  = "level0"
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate     = "level0"
-      environment = "sandpit"
+      tfstate = "level0"
     }
 
     creation_policies = {
@@ -21,13 +20,12 @@ keyvaults = {
   }
 
   level1 = {
-    name                = "level1"
+    name                = "htx-plg-kv-level1"
     resource_group_key  = "level1"
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate     = "level1"
-      environment = "sandpit"
+      tfstate = "level1"
     }
 
     creation_policies = {
@@ -40,13 +38,12 @@ keyvaults = {
   }
 
   level2 = {
-    name                = "level2"
+    name                = "htx-plg-kv-level2"
     resource_group_key  = "level2"
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate     = "level2"
-      environment = "sandpit"
+      tfstate = "level2"
     }
 
     creation_policies = {
@@ -56,17 +53,15 @@ keyvaults = {
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
       }
     }
-
   }
 
   level3 = {
-    name                = "level3"
+    name                = "htx-plg-kv-level3"
     resource_group_key  = "level3"
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate     = "level3"
-      environment = "sandpit"
+      tfstate = "level3"
     }
 
     creation_policies = {
@@ -79,13 +74,13 @@ keyvaults = {
   }
 
   level4 = {
-    name                = "level4"
+    name                = "htx-plg-kv-level4"
     resource_group_key  = "level4"
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate     = "level4"
-      environment = "sandpit"
+      tfstate = "level4"
+      purpose = "application key storage"
     }
 
     creation_policies = {

@@ -17,12 +17,17 @@ This scenario require the following privileges:
 | Azure subscription | Subscription owner |
 
 ## Deployment
-
 ```bash
+  export environment=<environment_name>
+  export caf_environment=<caf_environment_name>
+
 rover -lz /tf/caf/landingzones/caf_launchpad \
-  -launchpad -var-folder \
-  /tf/caf/landingzones/caf_launchpad/scenario/100 \
-  -a apply
+  -launchpad \
+  -var-folder /tf/caf/configuration/${environment}/level0/launchpad \
+  -parallelism 30 \
+  -level level0 \
+  -env ${caf_environment} \
+  -a [plan|apply|destroy]
 
 rover -lz /tf/caf/landingzones/caf_launchpad \
   -launchpad \
