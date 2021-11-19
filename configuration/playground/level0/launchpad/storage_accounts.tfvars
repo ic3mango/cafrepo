@@ -89,6 +89,12 @@ storage_accounts = {
       tfstate = {
         name = "tfstate"
       }
+      assnp = {
+        name = "assnp"
+      }
+      assp = {
+        name = "assp"
+      }
     }
   }
 }

@@ -16,8 +16,8 @@ After completing the steps from the general [configuration readme](../README.md)
 You can then specify the environment you are running:
 
 ```bash
-export environment=demo
-export caf_environment=contoso-demo
+export environment=playground
+export caf_environment=playground
 ```
 
 ### 1. Launchpad-level0 landing zones
@@ -28,26 +28,46 @@ export caf_environment=contoso-demo
 rover -lz /tf/caf/landingzones/caf_launchpad \
   -launchpad \
   -var-folder /tf/caf/configuration/${environment}/level0/launchpad \
-  -parallelism 30 \
   -level level0 \
   -env ${caf_environment} \
-  -a [plan|apply|destroy]
+  -a plan
 ```
 
 ### 2. Level 1 landing zones
 
-#### Deploy foundations
-
-In this section we use foundations as passthrough:
+#### Shared Services
 
 ```bash
 rover -lz /tf/caf/landingzones/caf_solution/ \
-  -tfstate caf_foundations.tfstate \
-  -var-folder /tf/caf/configuration/${environment}/level1 \
-  -parallelism 30 \
+  -var-folder /tf/caf/configuration/${environment}/level1/shared_services \
+  -tfstate shared_services.tfstate \
   -level level1 \
   -env ${caf_environment} \
-  -a [plan|apply|destroy]
+  -a plan
+```
+
+#### Networking Hub
+
+```bash
+rover -lz /tf/caf/landingzones/caf_solution/ \
+  -var-folder /tf/caf/configuration/${environment}/level1/
+  networking_hub \
+  -tfstate networking_hub.tfstate \
+  -level level1 \
+  -env ${caf_environment} \
+  -a plan
+```
+
+#### Networking Spoke
+
+```bash
+rover -lz /tf/caf/landingzones/caf_solution/ \
+  -var-folder /tf/caf/configuration/${environment}/level1/
+  networking_spoke \
+  -tfstate networking_spoke.tfstate \
+  -level level1 \
+  -env ${caf_environment} \
+  -a plan
 ```
 
 ### 3. Level 2 landing zones
