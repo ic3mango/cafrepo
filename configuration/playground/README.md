@@ -50,8 +50,7 @@ rover -lz /tf/caf/landingzones/caf_solution/ \
 
 ```bash
 rover -lz /tf/caf/landingzones/caf_solution/ \
-  -var-folder /tf/caf/configuration/${environment}/level1/
-  networking_hub \
+  -var-folder /tf/caf/configuration/${environment}/level1/networking_hub \
   -tfstate networking_hub.tfstate \
   -level level1 \
   -env ${caf_environment} \
@@ -62,8 +61,7 @@ rover -lz /tf/caf/landingzones/caf_solution/ \
 
 ```bash
 rover -lz /tf/caf/landingzones/caf_solution/ \
-  -var-folder /tf/caf/configuration/${environment}/level1/
-  networking_spoke \
+  -var-folder /tf/caf/configuration/${environment}/level1/networking_spoke \
   -tfstate networking_spoke.tfstate \
   -level level1 \
   -env ${caf_environment} \
