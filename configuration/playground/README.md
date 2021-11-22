@@ -28,12 +28,24 @@ export caf_environment=playground
 rover -lz /tf/caf/landingzones/caf_launchpad \
   -launchpad \
   -var-folder /tf/caf/configuration/${environment}/level0/launchpad \
+  -tfstate caf_launchpad.tfstate \
   -level level0 \
   -env ${caf_environment} \
   -a plan
 ```
 
 ### 2. Level 1 landing zones
+
+#### Deploy IAM
+
+```bash
+rover -lz /tf/caf/landingzones/caf_solution \
+  -var-folder /tf/caf/configuration/${environment}/level1/iam \
+  -tfstate iam.tfstate \
+  -level level1 \
+  -env ${caf_environment} \
+  -a plan
+```
 
 #### Shared Services
 
