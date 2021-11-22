@@ -1,7 +1,7 @@
 
 keyvaults = {
   level0 = {
-    name                = "htx-plg-kv-level0"
+    name                = "htx-plg-vault-level0"
     resource_group_key  = "level0"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -20,7 +20,7 @@ keyvaults = {
   }
 
   level1 = {
-    name                = "htx-plg-kv-level1"
+    name                = "htx-plg-vault-level1"
     resource_group_key  = "level1"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -38,7 +38,7 @@ keyvaults = {
   }
 
   level2 = {
-    name                = "htx-plg-kv-level2"
+    name                = "htx-plg-vault-level2"
     resource_group_key  = "level2"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -56,7 +56,7 @@ keyvaults = {
   }
 
   level3 = {
-    name                = "htx-plg-kv-level3"
+    name                = "htx-plg-vault-level3"
     resource_group_key  = "level3"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -74,7 +74,7 @@ keyvaults = {
   }
 
   level4 = {
-    name                = "htx-plg-kv-level4"
+    name                = "htx-plg-vault-level4"
     resource_group_key  = "level4"
     sku_name            = "standard"
     soft_delete_enabled = true
