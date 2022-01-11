@@ -18,6 +18,9 @@ You can then specify the environment you are running:
 ```bash
 export environment=playground
 export caf_environment=playground
+
+# cc
+# --impersonate-sp-from-keyvault-url https://cc-sp-kv.vault.azure.net/ \
 ```
 
 ### 1. Launchpad-level0 landing zones
@@ -31,6 +34,7 @@ rover -lz /tf/caf/landingzones/caf_launchpad \
   -tfstate caf_launchpad.tfstate \
   -level level0 \
   -env ${caf_environment} \
+  --impersonate-sp-from-keyvault-url https://cc-sp-kv.vault.azure.net/ \
   -a plan
 ```
 

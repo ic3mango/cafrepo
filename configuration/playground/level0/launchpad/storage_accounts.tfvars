@@ -1,7 +1,7 @@
 
 storage_accounts = {
   level0 = {
-    name                     = "htxplgstlevel0"
+    name                     = "ccplgstlevel0"
     resource_group_key       = "level0"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -21,7 +21,7 @@ storage_accounts = {
   }
 
   level1 = {
-    name                     = "htxplgstlevel1"
+    name                     = "ccplgstlevel1"
     resource_group_key       = "level1"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -39,7 +39,7 @@ storage_accounts = {
   }
 
   level2 = {
-    name                     = "htxplgstlevel2"
+    name                     = "ccplgstlevel2"
     resource_group_key       = "level2"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -57,7 +57,7 @@ storage_accounts = {
   }
 
   level3 = {
-    name                     = "htxplgstlevel3"
+    name                     = "ccplgstlevel3"
     resource_group_key       = "level3"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -75,7 +75,7 @@ storage_accounts = {
   }
 
   level4 = {
-    name                     = "htxplgstlevel4"
+    name                     = "ccplgstlevel4"
     resource_group_key       = "level4"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
